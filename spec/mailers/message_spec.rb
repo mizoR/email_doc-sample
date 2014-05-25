@@ -13,6 +13,10 @@ describe Message do
     it "renders the body" do
       mail.body.encoded.should match("Hi")
     end
+
+    it "Send welcome message. `#welcome`", email_doc: true do
+      mail.deliver
+    end
   end
 
 end
